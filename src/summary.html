@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/1.3.0/react-bootstrap.min.js" integrity="sha512-QMqIKaTq7LiZrlvEAm7bKJjR6kPc9rMjcAyRBEDCURcIfa6KhmjmPH0rHFApkm7g4jquxFU51ugbJvDzHNXS7g==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/1.3.0/react-bootstrap.js" integrity="sha512-0jIcYBFVp7zOUVT69y04G+lbxEGhNUPKX1OLIBDB67AXPdX/4Omzp5FngrCnx1uxJQrdWR0dJZhUmZfpMIecPQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
+
+    <script src="https://unpkg.com/bizcharts@4.0.14/umd/BizCharts.min.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+  />
+
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.7.0/antd.min.js" integrity="sha512-dDaZ99TlTg248yu58yPB08w7simbHW4fZDRpNFBtDWOYM4b6GG49IbIJBuP8Tz2CUxMV7DlLd1SEhueoXT07og==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.7.0/antd-with-locales.min.js" integrity="sha512-YSoKT1RxvmPf3fjmBj8wehIRfEB7JcD4BlJ287Y0yFB1HUoa6jax2SoSPoFBkRnt7pk8KUyIfOCtiI3iZU+I7Q==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.7.0/antd.compact.min.css" integrity="sha512-mDMMMLy7AO36+hk19BV/MtoEV264KQFUyW32Py/j2d58uL+N8soUO6HMzh7gK7CjVXEtXrKfKb0SXrLGw0u8TA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.7.0/antd.min.css" integrity="sha512-74vrvh18b+tTlQHnF591KylgOKqX7kZZ1nIHlvbjx49vPiFNjwAf3wztKuar1Qbkpt3c71YY/9iB43R4K9O7xA==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <title>FWRDIT </title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="summary.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/125ca80a38.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <link rel=”stylesheet” type=”text/css” href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
+
+</head>
+
+<body class="h-100">
+    <nav class="navbar navbar-expand-lg text-white" style="background-color: #ff6781;">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-brand" style="color: white; text-decoration-style: solid;">
+                        FWRDIT 
+                    </a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="neworder.html" style="color: white; text-decoration-style: solid;">
+                        <span> Create Order</span>
+                    </a>
+                </li>
+                <li class=" active">
+                    <a class="nav-link" href="view.html" style="color: white; text-decoration-style: solid;">
+                        <span style="color: white;"> View Order</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="payment.html" style="color: white; text-decoration-style: solid;">
+                        <span style="color: white;"> Payment Plan</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#" style="color: white; text-decoration-style: solid;">
+                        <span> Summary</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <div class="dropdown show">
+                <a class="btn btn-light btn-md dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Options
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" id="logoutBtn">Exit</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div style="padding-left: 35px" >
+        <fieldset>
+            <br />
+            <h1>  <legend style="font-weight:bold;">Summary</legend></h1>
+            <hr>
+        </fieldset>
+    </div>
+    
+    <div id="input_form"></div>
+    <div id="chart"></div>
+
+
+    <script src="./production_env.js"></script>
+    <script src="./index.js"></script>
+    <script type="text/babel" src="./summary.js"></script> 
+
+        <script>
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (!user) {
+                    window.location.href = "index.html";
+                }
+            })
+        </script>
+
+</body>
+
+</html>
